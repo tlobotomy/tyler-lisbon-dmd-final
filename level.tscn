@@ -29,10 +29,33 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 50.4)
 
 [node name="Floor" type="Node3D" parent="."]
 
-[node name="CSGBox3D" type="CSGBox3D" parent="Floor"]
-transform = Transform3D(60, 0, 0, 0, 5.998, -9.9662e-06, 0, 5.24362e-07, 114, 0, 0, 0)
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="Floor"]
 use_collision = true
-size = Vector3(1, 0.1, 1)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Floor/CSGCombiner3D"]
+transform = Transform3D(60, 0, 0, 0, 5.998, -9.9662e-06, 0, 5.24362e-07, 114, 0, 4.9831e-07, -5.7)
+use_collision = true
+size = Vector3(1, 0.1, 1.1)
+
+[node name="Cut1A" type="CSGBox3D" parent="Floor/CSGCombiner3D"]
+transform = Transform3D(6.2, 0, 0, 0, 1, 0, 0, 0, 6.2, -30, 0, -18.93)
+operation = 2
+size = Vector3(1, 1, 7.3)
+
+[node name="Cut1B" type="CSGBox3D" parent="Floor/CSGCombiner3D"]
+transform = Transform3D(6.2, 0, 0, 0, 1, 0, 0, 0, 6.2, 30, 0, -18.93)
+operation = 2
+size = Vector3(1, 1, 7.3)
+
+[node name="Cut2A" type="CSGBox3D" parent="Floor/CSGCombiner3D"]
+transform = Transform3D(6.2, 0, 0, 0, 1, 0, 0, 0, 4.185, -21.63, 0, -18.93)
+operation = 2
+size = Vector3(1.7, 1, 7.3)
+
+[node name="Cut2B" type="CSGBox3D" parent="Floor/CSGCombiner3D"]
+transform = Transform3D(6.2, 0, 0, 0, 1, 0, 0, 0, 4.185, 21.63, 0, -18.93)
+operation = 2
+size = Vector3(1.7, 1, 7.3)
 
 [node name="Wall" type="Node3D" parent="."]
 
