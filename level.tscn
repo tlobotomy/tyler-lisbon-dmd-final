@@ -87,7 +87,7 @@ use_collision = true
 radius = 2.7
 
 [node name="BigSphere" type="CSGSphere3D" parent="Wall/Left"]
-transform = Transform3D(13.3225, 0, 0, 0, 13.3225, 0, 0, 0, 18.8356, 22.9, 4.29, 47.658)
+transform = Transform3D(13.3225, 0, 0, 0, 13.3225, 0, 0, 0, 18.8356, 23, 4.09, 47.858)
 use_collision = true
 radius = 0.9
 
